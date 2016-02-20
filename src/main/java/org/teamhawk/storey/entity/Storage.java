@@ -4,11 +4,11 @@ public class Storage {
 
   private User owner;
   private User renter;
-  private double height;
-  private double width;
-  private double length;
-  private double price;
-  private int daysRented = 0;
+  private Double height;
+  private Double width;
+  private Double length;
+  private Double price;
+  private Integer daysRented = 0;
 
   public Storage(User owner, double height, double width, double length, double price) {
     this.owner = owner;
