@@ -3,12 +3,20 @@
 <head>
     <title>Storey</title>
     <link type="text/css" rel="stylesheet" href="./css/style.css">
-    <meta name="google-signin-client_id" content="298582902679-k9fbg2tpjehtaa235bkq3s4nolva2t6e.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+          content="298582902679-k9fbg2tpjehtaa235bkq3s4nolva2t6e.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </head>
 <body>
 <div class="background">
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div class="outer-box">
+        <div class="upper-box">
+            <img id="logo" src="img/logo.png"/>
+        </div>
+        <div class="lower-box">
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </div>
+    </div>
 </div>
 </body>
 </html>
