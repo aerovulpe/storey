@@ -1,0 +1,48 @@
+<div ng-controller="ConferenceDetailCtrl">
+	<div class="row">
+		<div class="col-lg-12">
+			<div id="messages" class="alert alert-{{alertStatus}}"
+				ng-show="messages">
+				<span ng-bind="messages"></span> <i
+					class="dismiss-messages pull-right glyphicon glyphicon-remove"
+					ng-click="messages = ''" ng-show="messages"></i>
+			</div>
+			<img class="spinner" src="/img/ajax-loader.gif" ng-show="loading" />
+		</div>
+	</div>
+
+	<div class="row" ng-init="init()">
+		<div class="col-md-9">
+			<div class="well well-sm">
+				<h2>{{storage.name}}</h2>
+				<h5>{{storage.description}}</h5>
+				<div>
+					<label for="volume">Total Volume: </label> <span id="volume">{{storage.volume}}</span>
+				</div>
+				<div>
+					<label for="owner">Owner: </label> <span id="owner">{{storage.ownerUserId}}</span>
+				</div>
+				<p>
+					<a class="btn btn-primary" ng-hide="isUserRenting"
+						ng-click="rentStorage()" ng-disabled="loading">Rent</a>
+				</p>
+			</div>
+
+			<form class="form" novalidate role="form">
+				<fieldset>
+					<div>
+						<label for="address">Address: </label> <span id="address">{{storage.address}}</span>
+					</div>
+					<div>
+						<label for="startDate">Start Date: </label> <span id="startDate">{{storage.startDate
+							| date:'dd-MMMM-yyyy'}}</span>
+					</div>
+					<div>
+						<label for="endDate">End Date: </label> <span id="endDate">{{storage.endDate
+							| date:'dd-MMMM-yyyy'}}</span>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</div>
